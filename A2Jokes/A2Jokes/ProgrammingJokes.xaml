@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="A2Jokes.ProgrammingJokes"
+             Title="Random Jokes"
+             BackgroundColor="SteelBlue">
+
+    <StackLayout Margin="20,35,20,20">
+        <Label x:Name="jokeToDisplay" VerticalOptions="CenterAndExpand"
+               FontSize="Medium" TextColor="Black" Text="Please press button for new joke!" />
+        <FlexLayout Direction="Column">
+
+            <Button HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" 
+                    FontSize="Medium" Text="Get a Programming Joke"
+                    Clicked="Get_Joke_Button_Clicked"/>
+
+            <Button HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" 
+                    FontSize="Medium" Text="Save Joke" 
+                    Clicked="Save_Button_Clicked"/>
+        </FlexLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="A2Jokes.SavedJokes"
+             Title="Saved Favorites"
+             BackgroundColor="SteelBlue">
+    <ContentPage.Content>
+        <ListView x:Name="jokeListView" HasUnevenRows="True"
+                  ItemsSource="{Binding Joke}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+
+                        <Label Text="{Binding Joke}" Padding="10" x:Name="Name" 
+                               FontSize="Medium" TextColor="Black" />
+
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Delete" IsDestructive="True"
+                                      Clicked="Deleted_MenuItem_Clicked"
+                                      CommandParameter="{Binding .}"/>
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
